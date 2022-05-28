@@ -8,14 +8,13 @@
 
     </body>
         <script>
-
+            "use strict";
             const gameOptions = ['Rock', 'Paper', 'Scissors'];
             const computerSelection = gameOptions[Math.floor(Math.random()*gameOptions.length)];
-            console.log (computerSelection)
 
             let playerSelection = (prompt("Please enter your choice "));
 
-            function playRound () {
+            function playRound (playerSection, computerSelection) {
 
                 if (playerSelection == 'Rock' && computerSelection == 'Paper')
                 {return ('You Lose! Paper beats Rock');}
@@ -37,14 +36,27 @@
 
                 else { return ('Tie');}
             }
-           
-            console.log(playRound());
 
-        function game (playRound) {
-            playRound
-            for (let i = 1; i <= 5; i++) {
-        }
-        }
+            function game () {
+            for (let i = 0; i<5; i++) {
+                let playerSelection = (prompt("Please enter your choice "));
+                playRound(playerSelection, computerSelection), 
+                console.log (playerSelection, computerSelection, playRound(), i)
+            }
+            
+            var playerScore = 0 
+            var computerScore = 0 
+
+            if (playRound == 'tie') {
+                return ('Player Score ' + (playerScore + 1) + 'Computer Score ' + computerScore);}
+                
+                else { return ('Computer Score ' + (computerScore + 1) + ' Player Score ' + playerScore);}   
+            }
+           
+                
+            console.log(game());
+
+            
            
         </script>
   
