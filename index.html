@@ -31,27 +31,29 @@
         {++playerScore; return ('You win! Rock beats paper.') ;}
     
         else if (playerSelection === 'paper' && computerSelection === 'Rock')
-        {++playerScore;return ('You win! Paper beats rock') ;}
+        {++playerScore; return ('You win! Paper beats rock') ;}
     
         else if (playerSelection === 'scissors' && computerSelection === 'Paper')
-        {++playerScore;return ('You Win! Scissors beats rock') ;}
+        {++playerScore; return ('You Win! Scissors beats rock') ;}
 
         else { return ('Tie');}
         }
-       
        console.log(playRound())
-       console.log ('Player score ', playerScore, 'Computer score ', computerScore)  
-       
-       function gameResult() {
+       console.log ('Player score ', playerScore, 'Computer score ', computerScore)       
+}
+
+    function game(playerScore, computerScore,) {
+        (playRound())
         if (playerScore > computerScore) 
         {return ('You Win');}
-        else (playerScore < computerScore)
-        {return ('Awww,you lose')}
+        else if (playerScore < computerScore)
+        {return ('Awww,you lose');}
+        else (playerScore == computerScore)
+        {return ('You Tied!')};
+        console.log (playerScore, computerScore) 
         }
-       
-}
-    
- console.log (gameResult())   
+  
+ console.log (game())   
   
      </script>
     </body>
